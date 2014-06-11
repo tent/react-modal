@@ -40,7 +40,6 @@ window.Modal = React.createClass({
 
 	handleBeforeComponentUpdate: function (props) {
 		if (props.hasOwnProperty('visible') && props.visible !== this.state.visible) {
-			this.__shouldUpdateBody = true;
 			this.setState({
 				visible: props.visible
 			});
@@ -54,10 +53,6 @@ window.Modal = React.createClass({
 			} else {
 				this.props.onHide();
 			}
-		}
-
-		if (this.__shouldUpdateBody) {
-			this.__shouldUpdateBody = false;
 			this.__setBodyOverflowVisible(!this.state.visible);
 		}
 	},
