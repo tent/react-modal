@@ -31,7 +31,7 @@ window.Modal = React.createClass({
 	},
 
 	componentDidMount: function () {
-		this.handleComponentUpdate(this.props, this.state);
+		this.handleComponentUpdate(this.props, this.getInitialState());
 	},
 
 	componentDidUpdate: function (prevProps, prevState) {
