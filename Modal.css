@@ -1,4 +1,5 @@
 .overlay {
+  box-sizing: content-box;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,22 +17,25 @@
   }
 
   .overlay-top {
+    box-sizing: content-box;
     position: relative;
     width: 699px;
     margin: 4% auto;
   }
 
   .overlay-content {
+    box-sizing: content-box;
     position: relative;
     width: 699px;
     margin: 0 auto;
     margin-bottom: 4%;
     padding: 22.5px 30px;
-    background-color: #f2f2f2;
+    background-color: #F3F4F7;
     border-radius: 4px;
   }
 
     .overlay-close {
+      box-sizing: content-box;
       position: absolute;
       top: 25.5px;
       right: 26px;
