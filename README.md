@@ -31,8 +31,8 @@ Modal({
 		onShow: function(){},
 		onHide: function(){}
 	},
-	React.DOM.header(null, React.DOM.h1(null, "Your Modal")),
-	React.DOM.p(null, "Hello there"))
+	React.createElement('header', null, React.createElement('h1', null, "Your Modal")),
+	React.createElement('p', null, "Hello there"))
 ```
 
 - `visible` (Boolean) can be used to toggle visibility of the modal, defaults to `false`.
