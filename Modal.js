@@ -2,7 +2,7 @@
 
 "use strict";
 
-window.Modal = React.createClass({
+var Modal = React.createClass({
 	displayName: "Modal",
 
 	getInitialState: function () {
@@ -112,5 +112,13 @@ window.Modal = React.createClass({
 				React.createElement('div', { className: "overlay-content" }, this.props.children)));
 	}
 });
+
+if (typeof window !== "undefined") {
+	window.Modal = Modal;
+} else {
+	/* jshint ignore:start */
+	module.exports = Modal;
+	/* jshint ignore:end */
+}
 
 })();
