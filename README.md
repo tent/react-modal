@@ -11,7 +11,6 @@ Modal
 ```
 
 ```
-/** @jsx React.DOM */
 <Modal
 	visible={ Boolean() }
 	onShow={ function(){} }
