@@ -7,6 +7,7 @@ Modal
 
 ```html
 <link href="Modal.css" rel="stylesheet" />
+<script src="http://fb.me/react-0.12.2.js" type="application/javascript"></script>
 <script src="Modal.js" type="application/javascript"></script>
 ```
 
