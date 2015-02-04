@@ -1,6 +1,4 @@
-(function () {
-
-"use strict";
+var React = require('react');
 
 var Modal = React.createClass({
 	displayName: "Modal",
@@ -113,12 +111,4 @@ var Modal = React.createClass({
 	}
 });
 
-if (typeof window !== "undefined") {
-	window.Modal = Modal;
-} else {
-	/* jshint ignore:start */
-	module.exports = Modal;
-	/* jshint ignore:end */
-}
-
-})();
+module.exports = Modal;
