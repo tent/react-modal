@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "React component for when you need a modal",
   "main": "Modal.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/cupcake/react-modal.git"
@@ -19,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cupcake/react-modal/issues"
   },
-  "homepage": "https://github.com/cupcake/react-modal"
+  "homepage": "https://github.com/cupcake/react-modal",
+  "dependencies": {
+    "react": "^0.12.0"
+  }
 }
