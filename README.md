@@ -26,13 +26,13 @@ Modal
 ```
 
 ```javascript
-Modal({
-		visible: Boolean(),
-		onShow: function(){},
-		onHide: function(){}
-	},
+React.createElement(Modal, {
+	visible: Boolean(),
+	onShow: function(){},
+	onHide: function(){}
+},
 	React.createElement('header', null, React.createElement('h1', null, "Your Modal")),
-	React.createElement('p', null, "Hello there"))
+	React.createElement('p', null, "Hello there"));
 ```
 
 - `visible` (Boolean) can be used to toggle visibility of the modal, defaults to `false`.
