@@ -23,7 +23,8 @@ var Modal = React.createClass({
 	getDefaultProps: function () {
 		return {
 			onShow: function(){},
-			onHide: function(){}
+			onHide: function(){},
+			closable: true
 		};
 	},
 
@@ -81,7 +82,7 @@ var Modal = React.createClass({
 	},
 
 	handleOverlayClick: function (e) {
-		if (e.target === this.refs.overlay.getDOMNode()) {
+		if (e.target === this.refs.overlay.getDOMNode() && this.props.closable) {
 			e.preventDefault();
 			e.stopPropagation();
 			this.toggleVisibility();
@@ -107,16 +108,22 @@ var Modal = React.createClass({
 	},
 
 	render: function () {
+		var closeBtn = React.createElement('div', { className: "overlay-top" }, React.createElement('div', {
+			className: "overlay-close",
+			title: "Close",
+			onClick: this.handleCloseBtnClick
+		}, "×"));
+
+		if (this.props.closable === false) {
+			closeBtn = React.createElement('div');
+		}
+
 		return (
 			React.createElement('div', {
 				className: "overlay"+ (this.state.visible ? "" : " hidden") + (this.props.className ? " "+ this.props.className : ""),
 				ref: "overlay",
 				onClick: this.handleOverlayClick
-			}, React.createElement('div', { className: "overlay-top" }, React.createElement('div', {
-					className: "overlay-close",
-					title: "Close",
-					onClick: this.handleCloseBtnClick
-				}, "×")),
+			}, closeBtn,
 
 				React.createElement('div', { className: "overlay-content" }, this.props.children)));
 	}

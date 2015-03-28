@@ -14,6 +14,7 @@ Modal
 ```
 <Modal
 	visible={ Boolean() }
+	closable={ Boolean() }
 	onShow={ function(){} }
 	onHide={ function(){} }>
 
@@ -28,6 +29,7 @@ Modal
 ```javascript
 React.createElement(Modal, {
 	visible: Boolean(),
+	closable: Boolean(),
 	onShow: function(){},
 	onHide: function(){}
 },
@@ -36,6 +38,8 @@ React.createElement(Modal, {
 ```
 
 - `visible` (Boolean) can be used to toggle visibility of the modal, defaults to `false`.
+
+- `closable` (Boolean) can be used disable rendering of the close button and prevent closing the modal when the overlay is clicked. Defaults to `true`.
 
 - `onShow` (function) is called when the modal becomes visible, defaults to an empty function.
 
