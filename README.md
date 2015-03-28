@@ -41,14 +41,6 @@ React.createElement(Modal, {
 
 - `onHide` (function) is called when the modal becomes not visible, default to an empty function.
 
-### Public API
-
-- `toggleVisibility()` (function) may be called to toggle the modal visibility.
-
-- `show()` (function) may be called to make the modal visible.
-
-- `hide()` (function) may be called to make the modal not visible.
-
 ## What it does
 
 Displays a modal and prevents the document from scrolling while visible.
