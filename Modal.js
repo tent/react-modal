@@ -5,7 +5,7 @@
 var React;
 if (typeof module !== "undefined") {
 	/* jshint ignore:start */
-	React = require("React");
+	React = require("react");
 	/* jshint ignore:end */
 } else {
 	React = window.React;
