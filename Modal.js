@@ -71,7 +71,7 @@ var Modal = React.createClass({
 		if (!visible) {
 			document.body.style.overflow = 'hidden';
 		} else {
-			document.body.style.overflow = null;
+			document.body.style.overflow = '';
 		}
 	},
 
